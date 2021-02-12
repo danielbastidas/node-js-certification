@@ -1,0 +1,14 @@
+with an active server try the command nc localhost port
+npm init -y
+
+TODO:
+1. create an example of stream using objectMode. Create a transform stream that read objects and write objects [DONE]
+2. Modify the buffer size of the stream[DONE]
+
+Control flow
+1. write the program suggested at the end of the first hey node page [DONE]
+2. Create example using the default options of request-promise [DONE]
+3. Create example using request promise receiving the full response in your resolve method [DONE]
+4. Create example using request promise without receiving the full response in your resolve method [DONE]
+5. Create example using request promise receiving the error as a resolved promise [DONE]
+6. Implement the 3 possible patterns of control

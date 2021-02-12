@@ -1,8 +1,5 @@
-const fs = require('fs')
-const outputStream = fs.createWriteStream('mill.txt')
+const fetch = require("node-fetch");
 
-for (let i = 0; i < 1e6; i++) {
-    outputStream.write('a')
+async function syncRun() {
+    await fetch('url')
 }
-
-outputStream.end()
