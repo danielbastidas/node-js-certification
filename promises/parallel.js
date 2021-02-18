@@ -1,10 +1,11 @@
-/** This example show how to execute one task after the other (all the tasks are the same, execute the same logic), 
- * every task using their own parameter and waiting for the response of all the tasks.
- * This is the same as using the promise-all.js file
+/** This example shows how to launch several task in parallel and wait for all of them to complete. 
+ * In this example the return value of each task is not passed as input parameter to the next task.
+ * If you want the returned value of the previous task you can use chained promises. 
+ * e.g promise().then(val => nextPromise(vale))
  */
 
 // The five task with their input
-const args = [1, 1, 1, 1, 1]
+const args = [1, 2, 3, 4, 5]
 // Where the result of all the taks will be stored
 var results = []
 
@@ -27,7 +28,8 @@ const taskMethod = async function (arg) {
 
                 setTimeout(function () {
                     arg *= 2
-                    resolve(arg)
+                    return resolve(arg)
+                    // simulates waiting for task response between 1 and 6 seconds
                 }, (Math.random() * 5 + 1) * 1000)
 
             } catch (error) {
@@ -39,6 +41,7 @@ const taskMethod = async function (arg) {
 
     const result = await myPromiseFunct()
     return result
+
 }
 
 /** Execute this function after all the tasks have been completed. With the output of each
@@ -48,27 +51,13 @@ function final(results) {
     console.log(`Done: ${results}`)
 }
 
-/** This pattern allow you to execute each task in a sequential (serie) way (one after the other)
- * The function parameter represents the input of the first task to be executed
- */
-function series(arg) {
+args.forEach(arg => {
 
-    // If there is a parameter then the next task should be invoked
-    if (arg) {
+    asynch(arg, function (arg) {
+        results.push(arg);
+        if (results.length == args.length) {
+            final(results)
+        }
+    })
 
-        // invoke the next task function
-        asynch(arg, function (arg) {
-            results.push(arg);
-            return series(args.shift());
-            // return series(arg)
-        });
-
-    } else {
-        return final(results)
-    }
-
-}
-
-series(args.shift())
-
-
+})

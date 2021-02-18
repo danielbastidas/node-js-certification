@@ -1,10 +1,13 @@
-/** This example show how to execute one task after the other (all the tasks are the same, execute the same logic), 
- * every task using their own parameter and waiting for the response of all the tasks.
- * This is the same as using the promise-all.js file
+/** This example show how to execute one task after the other(all the tasks are the same, execute the same logic), 
+ * but using the return value of the previous task as argument/input of the following task
  */
 
-// The five task with their input
-const args = [1, 1, 1, 1, 1]
+
+// The first task argument
+const firstTaskArg = 1
+// the number of times the same task needs to be invoked
+const taskNumber = 5
+
 // Where the result of all the taks will be stored
 var results = []
 
@@ -54,13 +57,13 @@ function final(results) {
 function series(arg) {
 
     // If there is a parameter then the next task should be invoked
-    if (arg) {
+    if (results.length < taskNumber) {
 
         // invoke the next task function
         asynch(arg, function (arg) {
             results.push(arg);
-            return series(args.shift());
-            // return series(arg)
+            // return series(args.shift());
+            return series(arg)
         });
 
     } else {
@@ -69,6 +72,7 @@ function series(arg) {
 
 }
 
-series(args.shift())
+/** firstTaskArg represent the argument of the first task */
+series(firstTaskArg)
 
 

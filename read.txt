@@ -11,4 +11,5 @@ Control flow
 3. Create example using request promise receiving the full response in your resolve method [DONE]
 4. Create example using request promise without receiving the full response in your resolve method [DONE]
 5. Create example using request promise receiving the error as a resolved promise [DONE]
-6. Implement the 3 possible patterns of control
+6. Implement the 3 possible patterns of control [DONE]
+7. Implement excersice 9 of learnyounode
