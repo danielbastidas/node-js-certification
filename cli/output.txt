@@ -1,0 +1,173 @@
+Statistical profiling result from isolate-0x5e4dfc0-7912-v8.log, (58 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     44   75.9%          /usr/bin/node
+      1    1.7%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+
+ [C++]:
+   ticks  total  nonlib   name
+      5    8.6%   38.5%  __write
+      3    5.2%   23.1%  fwrite
+      2    3.4%   15.4%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      1    1.7%    7.7%  std::locale::id::_M_id() const
+      1    1.7%    7.7%  __GI___pthread_mutex_unlock
+      1    1.7%    7.7%  _IO_file_xsputn
+
+ [Summary]:
+   ticks  total  nonlib   name
+      0    0.0%    0.0%  JavaScript
+     13   22.4%  100.0%  C++
+      2    3.4%   15.4%  GC
+     45   77.6%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+      1   50.0%    1.7%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      1   50.0%    1.7%  _IO_file_xsputn
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     44   75.9%  /usr/bin/node
+     38   86.4%    /usr/bin/node
+     18   47.4%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+     18  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      2   11.1%          Eval: ~<anonymous> stream.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    5.6%          LazyCompile: ~setupProcessObject internal/bootstrap/node.js:271:28
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    5.6%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:252:32
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    5.6%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:300:21
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    5.6%          LazyCompile: ~initializeCJSLoader internal/bootstrap/pre_execution.js:407:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:19:36
+      1    5.6%          LazyCompile: ~createWritableStdioStream internal/bootstrap/switches/is_main_thread.js:41:35
+      1  100.0%            LazyCompile: ~getStdout internal/bootstrap/switches/is_main_thread.js:120:19
+      1    5.6%          Eval: ~<anonymous> net.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    5.6%          Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    5.6%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    5.6%          Eval: ~<anonymous> internal/process/esm_loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    5.6%          Eval: ~<anonymous> internal/modules/esm/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    5.6%          Eval: ~<anonymous> internal/modules/esm/get_source.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    5.6%          Eval: ~<anonymous> internal/modules/cjs/helpers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    5.6%          Eval: ~<anonymous> internal/bootstrap/switches/is_main_thread.js:1:1
+      1    5.6%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    5.6%          Eval: ~<anonymous> events.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    5.6%          Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      3    7.9%      LazyCompile: ~internalBinding internal/bootstrap/loaders.js:137:45
+      1   33.3%        Eval: ~<anonymous> net.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1   33.3%        Eval: ~<anonymous> internal/bootstrap/loaders.js:1:1
+      1   33.3%        Eval: ~<anonymous> fs.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1    2.6%      LazyCompile: ~writeGeneric internal/stream_base_commons.js:143:22
+      1  100.0%        LazyCompile: ~Socket._writeGeneric net.js:759:42
+      1  100.0%          LazyCompile: ~Socket._write net.js:796:35
+      1  100.0%            LazyCompile: ~writeOrBuffer internal/streams/writable.js:334:23
+      1    2.6%      LazyCompile: ~wrapProcessMethods internal/process/per_thread.js:43:28
+      1  100.0%        Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.6%      LazyCompile: ~resolveMainPath internal/modules/run_main.js:8:25
+      1  100.0%        LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:65:31
+      1  100.0%          Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.6%      LazyCompile: ~makeNodeErrorWithCode internal/errors.js:255:31
+      1  100.0%        LazyCompile: ~E internal/errors.js:328:11
+      1  100.0%          Eval: ~<anonymous> internal/errors.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.6%      LazyCompile: ~isInsideNodeModules internal/util.js:353:29
+      1  100.0%        LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+      1  100.0%          LazyCompile: ~Buffer buffer.js:280:16
+      1  100.0%            Eval: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/cli/test.js:1:1
+      1    2.6%      LazyCompile: ~hidden internal/errors.js:286:25
+      1  100.0%        LazyCompile: ~readSync fs.js:555:18
+      1  100.0%          LazyCompile: ~tryReadSync fs.js:362:21
+      1  100.0%            LazyCompile: ~readFileSync fs.js:374:22
+      1    2.6%      LazyCompile: ~fromStringFast buffer.js:425:24
+      1  100.0%        LazyCompile: ~fromString buffer.js:444:20
+      1  100.0%          LazyCompile: ~from buffer.js:306:28
+      1  100.0%            Eval: ~<anonymous> internal/fs/utils.js:1:1
+      1    2.6%      LazyCompile: ~exposeInterface internal/bootstrap/node.js:345:25
+      1  100.0%        Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.6%      LazyCompile: ~emitAfterScript internal/async_hooks.js:479:25
+      1  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+      1    2.6%      LazyCompile: ~createUnsafeBuffer buffer.js:149:28
+      1  100.0%        LazyCompile: ~createPool buffer.js:158:20
+      1  100.0%          Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1    2.6%      LazyCompile: ~createContext vm.js:220:23
+      1  100.0%        LazyCompile: ~runInNewContext vm.js:297:25
+      1  100.0%          LazyCompile: ~isInsideNodeModules internal/util.js:353:29
+      1  100.0%            LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+      1    2.6%      LazyCompile: ~Socket net.js:268:16
+      1  100.0%        LazyCompile: ~WriteStream tty.js:84:21
+      1  100.0%          LazyCompile: ~createWritableStdioStream internal/bootstrap/switches/is_main_thread.js:41:35
+      1  100.0%            LazyCompile: ~getStdout internal/bootstrap/switches/is_main_thread.js:120:19
+      1    2.6%      LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      1  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      1  100.0%          LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:65:31
+      1  100.0%            Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.6%      Eval: ~<anonymous> internal/timers.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1  100.0%            Eval: ~<anonymous> timers.js:1:1
+      1    2.6%      Eval: ~<anonymous> internal/process/task_queues.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.6%      Eval: ~<anonymous> internal/options.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/pre_execution.js:1:1
+      1    2.6%      Eval: ~<anonymous> internal/console/constructor.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1  100.0%            Eval: ~<anonymous> internal/console/global.js:1:1
+      1    2.3%    LazyCompile: ~defineColorAlias internal/util/inspect.js:406:26
+      1  100.0%      Eval: ~<anonymous> internal/util/inspect.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1  100.0%            Eval: ~<anonymous> events.js:1:1
+
+      5    8.6%  __write
+
+      3    5.2%  fwrite
+
+      2    3.4%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      1   50.0%    /usr/bin/node
+      1  100.0%      LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:65:31
+      1  100.0%        Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+
+      1    1.7%  std::locale::id::_M_id() const
+
+      1    1.7%  __GI___pthread_mutex_unlock
+
+      1    1.7%  _IO_file_xsputn
+      1  100.0%    /usr/bin/node
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:19:36
+      1  100.0%        Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+
+      1    1.7%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      1  100.0%    /usr/bin/node
+      1  100.0%      LazyCompile: ~formatWithOptions internal/util/inspect.js:1893:27
+      1  100.0%        LazyCompile: ~value internal/console/constructor.js:321:20
+      1  100.0%          LazyCompile: ~log internal/console/constructor.js:357:6
+      1  100.0%            /usr/bin/node
+

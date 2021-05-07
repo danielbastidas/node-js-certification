@@ -1,0 +1,526 @@
+// This file was generetad in the following way
+// First run the application you want to monitor using the following command:
+// NODE_ENV=production node --prof app.js
+// then execute your performance test, for instance: autocannon -c 100 -m POST -H 'content-type=application/json' -b '{ "hello": "world"}' http://localhost:3000/echo
+// a file with the following name should have been generated isolate-0xnnnnnnnnnnnn-v8.log so to read the information of that file execute the following command
+// node --prof-process isolate-0xnnnnnnnnnnnn-v8.log > processed.txt
+
+Statistical profiling result from isolate-0x5c52fc0-7759-v8.log, (9404 ticks, 29 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   7208   76.6%          /usr/bin/node
+    266    2.8%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     18    0.2%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+      7    0.1%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     55    0.6%    2.9%  LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+     27    0.3%    1.4%  LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     27    0.3%    1.4%  LazyCompile: *parserOnHeadersComplete _http_common.js:75:33
+     26    0.3%    1.4%  LazyCompile: *end _http_outgoing.js:769:45
+     22    0.2%    1.2%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     22    0.2%    1.2%  LazyCompile: *_send _http_outgoing.js:305:49
+     21    0.2%    1.1%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+     20    0.2%    1.0%  LazyCompile: *typeis /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:43:17
+     19    0.2%    1.0%  LazyCompile: *readableAddChunk internal/streams/readable.js:231:26
+     19    0.2%    1.0%  LazyCompile: *parserOnIncoming _http_server.js:809:26
+     18    0.2%    0.9%  LazyCompile: *etag /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/etag/index.js:70:15
+     18    0.2%    0.9%  LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+     17    0.2%    0.9%  LazyCompile: *resOnFinish _http_server.js:756:21
+     17    0.2%    0.9%  LazyCompile: *read /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:38:15
+     17    0.2%    0.9%  LazyCompile: *_storeHeader _http_outgoing.js:360:22
+     16    0.2%    0.8%  LazyCompile: *setHeader _http_outgoing.js:556:57
+     16    0.2%    0.8%  LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     16    0.2%    0.8%  LazyCompile: *expressInit /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/middleware/init.js:29:30
+     15    0.2%    0.8%  LazyCompile: *Readable.removeListener internal/streams/readable.js:887:45
+     15    0.2%    0.8%  LazyCompile: *Readable.read internal/streams/readable.js:390:35
+     14    0.1%    0.7%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+     14    0.1%    0.7%  LazyCompile: *socketListenerWrap _http_server.js:923:37
+     14    0.1%    0.7%  LazyCompile: *Readable.on internal/streams/readable.js:857:33
+     13    0.1%    0.7%  RegExp: [^\t\x20-\x7e\x80-\xff]
+     13    0.1%    0.7%  LazyCompile: *parserOnBody _http_common.js:129:22
+     11    0.1%    0.6%  LazyCompile: *writeHead _http_server.js:250:19
+     11    0.1%    0.6%  LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     11    0.1%    0.6%  LazyCompile: *afterWriteTick internal/streams/writable.js:451:24
+     10    0.1%    0.5%  RegExp: ^[A-Za-z0-9][A-Za-z0-9!#$&^_-]{0,126}$
+     10    0.1%    0.5%  LazyCompile: *resume_ internal/streams/readable.js:965:17
+     10    0.1%    0.5%  LazyCompile: *onwrite internal/streams/writable.js:394:17
+     10    0.1%    0.5%  LazyCompile: *debug /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/debug/src/debug.js:65:17
+     10    0.1%    0.5%  LazyCompile: *app.<computed> /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/application.js:473:25
+      9    0.1%    0.5%  RegExp: ^ *([A-Za-z0-9][A-Za-z0-9!#$&^_-]{0,126})\/([A-Za-z0-9][A-Za-z0-9!#$&^_.+-]{0,126}) *$
+      9    0.1%    0.5%  LazyCompile: *onEnd /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:258:18
+      9    0.1%    0.5%  LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+      9    0.1%    0.5%  LazyCompile: *getDecoder /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/iconv-lite/lib/index.js:126:39
+      8    0.1%    0.4%  LazyCompile: *parse /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/media-typer/index.js:139:15
+      8    0.1%    0.4%  LazyCompile: *header /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:754:29
+      8    0.1%    0.4%  LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:136:31
+      8    0.1%    0.4%  LazyCompile: *fromString buffer.js:444:20
+      8    0.1%    0.4%  LazyCompile: *format /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/content-type/index.js:65:17
+      8    0.1%    0.4%  LazyCompile: *emit events.js:264:44
+      8    0.1%    0.4%  LazyCompile: *_flushOutput _http_outgoing.js:890:63
+      8    0.1%    0.4%  LazyCompile: *Readable.resume internal/streams/readable.js:944:37
+      7    0.1%    0.4%  LazyCompile: *setStreamTimeout internal/stream_base_commons.js:243:26
+      7    0.1%    0.4%  LazyCompile: *onParserExecuteCommon _http_server.js:658:31
+      7    0.1%    0.4%  LazyCompile: *getDecoder /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:41:21
+      7    0.1%    0.4%  LazyCompile: *fastparse /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/parseurl/index.js:95:20
+      7    0.1%    0.4%  LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+      7    0.1%    0.4%  LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:77:34
+      6    0.1%    0.3%  RegExp: ;\s*charset\s*=
+      6    0.1%    0.3%  RegExp: :\d{4}$|[^0-9a-z]
+      6    0.1%    0.3%  LazyCompile: *nextTick internal/process/task_queues.js:101:18
+      6    0.1%    0.3%  LazyCompile: *endReadableNT internal/streams/readable.js:1320:23
+      6    0.1%    0.3%  LazyCompile: *_read _http_incoming.js:104:49
+      6    0.1%    0.3%  LazyCompile: *_flush _http_outgoing.js:873:51
+      6    0.1%    0.3%  LazyCompile: *Writable.write internal/streams/writable.js:258:36
+      5    0.1%    0.3%  LazyCompile: *query /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/middleware/query.js:39:24
+      5    0.1%    0.3%  LazyCompile: *app /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/express.js:38:21
+      5    0.1%    0.3%  LazyCompile: *Socket.resume net.js:611:35
+      4    0.0%    0.2%  RegExp: ^[\x20\x09\x0a\x0d]*(.)
+      4    0.0%    0.2%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      4    0.0%    0.2%  LazyCompile: *listenerCount events.js:582:23
+      4    0.0%    0.2%  LazyCompile: *getcontenttype /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/content-type/index.js:174:25
+      4    0.0%    0.2%  LazyCompile: *getHeader _http_outgoing.js:571:57
+      4    0.0%    0.2%  LazyCompile: *get internal/streams/writable.js:710:8
+      4    0.0%    0.2%  LazyCompile: *get internal/streams/duplex.js:92:8
+      4    0.0%    0.2%  LazyCompile: *arrayClone events.js:602:20
+      4    0.0%    0.2%  LazyCompile: *_handles_method /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:58:59
+      4    0.0%    0.2%  LazyCompile: *ReadableState internal/streams/readable.js:90:23
+      3    0.0%    0.2%  RegExp: ^\/echo\/?$
+      3    0.0%    0.2%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      3    0.0%    0.2%  RegExp: ; *([!#$%&'\*\+\-\.0-9A-Z\^_`a-z\|~]+) *= *("(?:[ !\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u0020-\u007e])*"|[!#$%&'\*\+\-\.0-9A-Z\^_`a-z\|~]+) *
+      3    0.0%    0.2%  LazyCompile: *urlencodedParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      3    0.0%    0.2%  LazyCompile: *setRequestTimeout _http_server.js:730:27
+      3    0.0%    0.2%  LazyCompile: *processPromiseRejections internal/process/promises.js:190:34
+      3    0.0%    0.2%  LazyCompile: *parserOnMessageComplete _http_common.js:145:33
+      3    0.0%    0.2%  LazyCompile: *matchKnownFields _http_incoming.js:157:26
+      3    0.0%    0.2%  LazyCompile: *get internal/streams/readable.js:1252:8
+      3    0.0%    0.2%  LazyCompile: *append internal/linkedlist.js:29:16
+      3    0.0%    0.2%  LazyCompile: *_addListener events.js:343:22
+      3    0.0%    0.2%  LazyCompile: *Timeout internal/timers.js:162:17
+      3    0.0%    0.2%  LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+      3    0.0%    0.2%  LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/request.js:467:36
+      2    0.0%    0.1%  RegExp: ^text\/|^application\/(javascript|json)
+      2    0.0%    0.1%  LazyCompile: *updateOutgoingData _http_server.js:513:28
+      2    0.0%    0.1%  LazyCompile: *parse /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/bytes/index.js:137:15
+      2    0.0%    0.1%  LazyCompile: *onData /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:240:19
+      1    0.0%    0.1%  RegExp: ^[A-Za-z0-9][A-Za-z0-9!#$&^_.-]{0,126}$
+      1    0.0%    0.1%  LazyCompile: *typeofrequest /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:123:24
+      1    0.0%    0.1%  LazyCompile: *set /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/application.js:352:23
+      1    0.0%    0.1%  LazyCompile: *resume internal/streams/readable.js:958:16
+      1    0.0%    0.1%  LazyCompile: *onParserExecute _http_server.js:601:25
+      1    0.0%    0.1%  LazyCompile: *onFinish _http_outgoing.js:764:18
+      1    0.0%    0.1%  LazyCompile: *normalizeString path.js:52:25
+      1    0.0%    0.1%  LazyCompile: *clearRequestTimeout _http_server.js:742:29
+      1    0.0%    0.1%  LazyCompile: *EventEmitter.init events.js:131:29
+
+ [C++]:
+   ticks  total  nonlib   name
+    506    5.4%   26.6%  writev
+    173    1.8%    9.1%  __libc_read
+     65    0.7%    3.4%  __libc_malloc
+     37    0.4%    1.9%  __pthread_cond_timedwait
+     24    0.3%    1.3%  do_futex_wait.constprop.0
+     22    0.2%    1.2%  epoll_ctl
+     22    0.2%    1.2%  __GI___pthread_getspecific
+     18    0.2%    0.9%  cfree
+     15    0.2%    0.8%  epoll_pwait
+     15    0.2%    0.8%  __lll_lock_wait
+     14    0.1%    0.7%  __write
+     12    0.1%    0.6%  operator delete(void*)
+     12    0.1%    0.6%  __pthread_cond_signal
+     10    0.1%    0.5%  operator new(unsigned long)
+      9    0.1%    0.5%  __clock_gettime
+      9    0.1%    0.5%  __GI___pthread_mutex_lock
+      7    0.1%    0.4%  __mprotect
+      5    0.1%    0.3%  operator delete[](void*)
+      5    0.1%    0.3%  fmod
+      4    0.0%    0.2%  operator new[](unsigned long, std::nothrow_t const&)
+      4    0.0%    0.2%  __fmod_finite
+      4    0.0%    0.2%  __GI___pthread_mutex_unlock
+      2    0.0%    0.1%  operator new[](unsigned long)
+      2    0.0%    0.1%  fwrite
+      2    0.0%    0.1%  __mmap
+      1    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+      1    0.0%    0.1%  brk
+      1    0.0%    0.1%  __pthread_cond_wait
+      1    0.0%    0.1%  __pthread_cond_broadcast
+      1    0.0%    0.1%  __errno_location
+      1    0.0%    0.1%  _IO_file_xsputn
+
+ [Summary]:
+   ticks  total  nonlib   name
+    872    9.3%   45.8%  JavaScript
+   1004   10.7%   52.7%  C++
+    413    4.4%   21.7%  GC
+   7499   79.7%          Shared libraries
+     29    0.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    506   78.3%    5.4%  writev
+     50    7.7%    0.5%  __libc_malloc
+     10    1.5%    0.1%  operator delete(void*)
+     10    1.5%    0.1%  cfree
+     10    1.5%    0.1%  __GI___pthread_getspecific
+      9    1.4%    0.1%  __GI___pthread_mutex_lock
+      8    1.2%    0.1%  operator new(unsigned long)
+      8    1.2%    0.1%  __clock_gettime
+      6    0.9%    0.1%  __write
+      5    0.8%    0.1%  fmod
+      4    0.6%    0.0%  operator new[](unsigned long, std::nothrow_t const&)
+      4    0.6%    0.0%  __fmod_finite
+      3    0.5%    0.0%  operator delete[](void*)
+      3    0.5%    0.0%  __GI___pthread_mutex_unlock
+      2    0.3%    0.0%  fwrite
+      2    0.3%    0.0%  __mprotect
+      1    0.2%    0.0%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+      1    0.2%    0.0%  operator new[](unsigned long)
+      1    0.2%    0.0%  brk
+      1    0.2%    0.0%  __pthread_cond_signal
+      1    0.2%    0.0%  __lll_lock_wait
+      1    0.2%    0.0%  _IO_file_xsputn
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   7208   76.6%  /usr/bin/node
+   4129   57.3%    /usr/bin/node
+    379    9.2%      LazyCompile: *read /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:38:15
+    364   96.0%        LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+    364  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+    364  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+     15    4.0%        LazyCompile: ~jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+     15  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     15  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+    324    7.8%      LazyCompile: *writeHead _http_server.js:250:19
+    324  100.0%        LazyCompile: *end _http_outgoing.js:769:45
+    324  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    321   99.1%            LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+    315    7.6%      LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+    199   63.2%        LazyCompile: *urlencodedParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/urlencoded.js:79:36
+    199  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+    199  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+     75   23.8%        LazyCompile: ~urlencodedParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/urlencoded.js:79:36
+     68   90.7%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     68  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+      7    9.3%          LazyCompile: ~handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      7  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+     32   10.2%        LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:77:34
+     31   96.9%          LazyCompile: *onEnd /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:258:18
+     31  100.0%            LazyCompile: *endReadableNT internal/streams/readable.js:1320:23
+      1    3.1%          LazyCompile: *done /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:199:17
+      1  100.0%            LazyCompile: ~onEnd /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:258:18
+    266    6.4%      LazyCompile: *end _http_outgoing.js:769:45
+    266  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    260   97.7%          LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+    260  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      6    2.3%          LazyCompile: ~json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      6  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    238    5.8%      /usr/bin/node
+     66   27.7%        LazyCompile: *typeis /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:43:17
+     59   89.4%          LazyCompile: *typeofrequest /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:123:24
+     59  100.0%            LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+      7   10.6%          LazyCompile: ~typeofrequest /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:123:24
+      4   57.1%            LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+      3   42.9%            LazyCompile: ~checkType /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:227:29
+     59   24.8%        LazyCompile: *expressInit /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/middleware/init.js:29:30
+     59  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     59  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+     31   13.0%        LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     31  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     21   67.7%            LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     10   32.3%            LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     31   13.0%        LazyCompile: *format /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/content-type/index.js:65:17
+     31  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     31  100.0%            LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     11    4.6%        LazyCompile: ~parse /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/content-type/index.js:106:16
+     11  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     10   90.9%            LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      1    9.1%            LazyCompile: ~json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     10    4.2%        LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+     10  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     10  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+      5    2.1%        LazyCompile: *etag /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/etag/index.js:70:15
+      5  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      5  100.0%            LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      4    1.7%        LazyCompile: *parse /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/media-typer/index.js:139:15
+      4  100.0%          LazyCompile: *typeis /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:43:17
+      4  100.0%            LazyCompile: *typeofrequest /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:123:24
+      4    1.7%        LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+      3   75.0%          LazyCompile: *urlencodedParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      3  100.0%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      1   25.0%          LazyCompile: ~urlencodedParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      1  100.0%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      3    1.3%        LazyCompile: ~mimeMatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:195:20
+      3  100.0%          LazyCompile: ~typeis /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:43:17
+      3  100.0%            LazyCompile: ~typeofrequest /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:123:24
+      3    1.3%        LazyCompile: ~expressInit /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/middleware/init.js:29:30
+      2   66.7%          LazyCompile: ~handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+      1   33.3%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+    205    5.0%      LazyCompile: *expressInit /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/middleware/init.js:29:30
+    205  100.0%        LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+    205  100.0%          LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+    205  100.0%            LazyCompile: *query /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/middleware/query.js:39:24
+    187    4.5%      LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+    187  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    135   72.2%          LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+    135  100.0%            LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+     52   27.8%          LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     46   88.5%            LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+      6   11.5%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+    174    4.2%      LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    118   67.8%        LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+    118  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     89   75.4%            LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     29   24.6%            LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     36   20.7%        LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     36  100.0%          LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+     36  100.0%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     14    8.0%        LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     10   71.4%          LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+     10  100.0%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      4   28.6%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      4  100.0%            LazyCompile: ~next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:114:16
+      6    3.4%        LazyCompile: ~json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      6  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      6  100.0%            LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+    164    4.0%      LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:77:34
+    164  100.0%        LazyCompile: *onEnd /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:258:18
+    164  100.0%          LazyCompile: *endReadableNT internal/streams/readable.js:1320:23
+    164  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+    140    3.4%      LazyCompile: *etag /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/etag/index.js:70:15
+    140  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    140  100.0%          LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+    140  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    132    3.2%      LazyCompile: *resOnFinish _http_server.js:756:21
+    112   84.8%        LazyCompile: *onFinish _http_outgoing.js:764:18
+    112  100.0%          LazyCompile: *afterWriteTick internal/streams/writable.js:451:24
+    112  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     20   15.2%        LazyCompile: *emit events.js:264:44
+     20  100.0%          LazyCompile: ~onFinish _http_outgoing.js:764:18
+      9   45.0%            LazyCompile: *afterWriteTick internal/streams/writable.js:451:24
+      9   45.0%            LazyCompile: *afterWrite internal/streams/writable.js:456:20
+      2   10.0%            LazyCompile: *callback internal/streams/writable.js:511:44
+    131    3.2%      LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+    131  100.0%        LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+    131  100.0%          LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+    131  100.0%            LazyCompile: *expressInit /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/middleware/init.js:29:30
+    125    3.0%      LazyCompile: *Readable.on internal/streams/readable.js:857:33
+    117   93.6%        LazyCompile: *read /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:38:15
+    115   98.3%          LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+    115  100.0%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      2    1.7%          LazyCompile: ~jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+      2  100.0%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      6    4.8%        LazyCompile: *parserOnIncoming _http_server.js:809:26
+      6  100.0%          LazyCompile: *parserOnHeadersComplete _http_common.js:75:33
+      2    1.6%        LazyCompile: ~readStream /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:147:21
+      2  100.0%          LazyCompile: ~getRawBody /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:67:21
+      2  100.0%            LazyCompile: ~read /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:38:15
+    116    2.8%      LazyCompile: *_storeHeader _http_outgoing.js:360:22
+    116  100.0%        LazyCompile: *writeHead _http_server.js:250:19
+    116  100.0%          LazyCompile: *end _http_outgoing.js:769:45
+    116  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    114    2.8%      LazyCompile: *_send _http_outgoing.js:305:49
+    114  100.0%        LazyCompile: *end _http_outgoing.js:769:45
+    114  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    114  100.0%            LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     98    2.4%      LazyCompile: ~parse /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/content-type/index.js:106:16
+     94   95.9%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     90   95.7%          LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     90  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      4    4.3%          LazyCompile: ~json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      4  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      4    4.1%        LazyCompile: ~setCharset /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/utils.js:250:41
+      4  100.0%          LazyCompile: ~send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      4  100.0%            LazyCompile: ~json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     93    2.3%      LazyCompile: *setHeader _http_outgoing.js:556:57
+     49   52.7%        LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     49  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     28   57.1%            LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     21   42.9%            LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     43   46.2%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     43  100.0%          LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     43  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      1    1.1%        LazyCompile: ~expressInit /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+     47    1.1%      LazyCompile: *parserOnBody _http_common.js:129:22
+     42    1.0%      LazyCompile: *resume_ internal/streams/readable.js:965:17
+     42  100.0%        LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     42    1.0%      LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/request.js:467:36
+     42  100.0%        /usr/bin/node
+     42  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     42  100.0%            LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+    230    3.2%    LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+    230  100.0%      LazyCompile: *end _http_outgoing.js:769:45
+    230  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    225   97.8%          LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+    225  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      5    2.2%          LazyCompile: ~json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      5  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    191    2.6%    LazyCompile: ~parse /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/content-type/index.js:106:16
+    184   96.3%      LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    180   97.8%        LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+    180  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    117   65.0%            LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     63   35.0%            LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+      4    2.2%        LazyCompile: ~json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      4  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      4  100.0%            LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+      4    2.1%      LazyCompile: ~getCharset /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:186:21
+      4  100.0%        LazyCompile: ~jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+      4  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      4  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+      3    1.6%      LazyCompile: ~setCharset /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/utils.js:250:41
+      3  100.0%        LazyCompile: ~send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      3  100.0%          LazyCompile: ~json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      3  100.0%            LazyCompile: ~send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    147    2.0%    LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    122   83.0%      LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+    122  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     92   75.4%          LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     92  100.0%            LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+     30   24.6%          LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     25   83.3%            LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+      5   16.7%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     13    8.8%      LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     13  100.0%        LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+     13  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     13  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+     10    6.8%      LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+      8   80.0%        LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+      8  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      8  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+      2   20.0%        LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%          LazyCompile: ~next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:114:16
+      2  100.0%            LazyCompile: ~dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+      2    1.4%      LazyCompile: ~json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      2  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      2  100.0%          LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+      2  100.0%            LazyCompile: ~handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     90    1.2%    LazyCompile: *etag /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/etag/index.js:70:15
+     90  100.0%      LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     90  100.0%        LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     90  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     63   70.0%            LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     27   30.0%            LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     85    1.2%    LazyCompile: *parserOnHeadersComplete _http_common.js:75:33
+     82    1.1%    LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     82  100.0%      LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     56   68.3%        LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     56  100.0%          LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+     56  100.0%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     26   31.7%        LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+     25   96.2%          LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+     25  100.0%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      1    3.8%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:114:16
+
+    506    5.4%  writev
+    501   99.0%    LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+    501  100.0%      LazyCompile: *end _http_outgoing.js:769:45
+    501  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+    491   98.0%          LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+    491  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     10    2.0%          LazyCompile: ~json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     10  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+
+    266    2.8%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+    117   44.0%    /usr/bin/node
+     27   23.1%      LazyCompile: *read /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:38:15
+     24   88.9%        LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+     24  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+     24  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+      3   11.1%        LazyCompile: ~jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+      3  100.0%          LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            LazyCompile: *next /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/index.js:176:16
+     17   14.5%      LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:77:34
+     17  100.0%        LazyCompile: *onEnd /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:258:18
+     17  100.0%          LazyCompile: *endReadableNT internal/streams/readable.js:1320:23
+     17  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     13   11.1%      LazyCompile: *setHeader _http_outgoing.js:556:57
+     10   76.9%        LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     10  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      8   80.0%            LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+      2   20.0%            LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+      3   23.1%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      3  100.0%          LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      3  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      9    7.7%      LazyCompile: ~parse /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/content-type/index.js:106:16
+      9  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      9  100.0%          LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      9  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      9    7.7%      LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      9  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      5   55.6%          LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+      5  100.0%            LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+      4   44.4%          LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+      4  100.0%            LazyCompile: *dispatch /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/route.js:98:45
+      9    7.7%      /usr/bin/node
+      2   22.2%        LazyCompile: ~FastBuffer internal/buffer.js:951:1
+      2  100.0%          LazyCompile: ~alloc buffer.js:372:30
+      2  100.0%            LazyCompile: ~StringDecoder string_decoder.js:70:23
+      2   22.2%        LazyCompile: *typeis /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:43:17
+      2  100.0%          LazyCompile: *typeofrequest /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:123:24
+      2  100.0%            LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+      2   22.2%        LazyCompile: *etag /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/etag/index.js:70:15
+      2  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      2  100.0%            LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      1   11.1%        LazyCompile: ~clearBuffer internal/streams/writable.js:493:21
+      1  100.0%          LazyCompile: ~Writable.uncork internal/streams/writable.js:310:37
+      1  100.0%            LazyCompile: ~end _http_outgoing.js:769:45
+      1   11.1%        LazyCompile: ~<anonymous> internal/per_context/primordials.js:23:10
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:271:26
+      1  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:391:17
+      1   11.1%        LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+      1  100.0%          LazyCompile: *end _http_outgoing.js:769:45
+      1  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      6    5.1%      LazyCompile: *typeis /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:43:17
+      6  100.0%        LazyCompile: *typeofrequest /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:123:24
+      6  100.0%          LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+      6  100.0%            LazyCompile: *handle /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/router/layer.js:86:49
+      6    5.1%      LazyCompile: *_storeHeader _http_outgoing.js:360:22
+      6  100.0%        LazyCompile: *writeHead _http_server.js:250:19
+      6  100.0%          LazyCompile: *end _http_outgoing.js:769:45
+      6  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      5    4.3%      LazyCompile: *header /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:754:29
+      5  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      5  100.0%          LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      5  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      5    4.3%      LazyCompile: *getDecoder /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/iconv-lite/lib/index.js:126:39
+      5  100.0%        LazyCompile: *getDecoder /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:41:21
+      5  100.0%          LazyCompile: *read /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:38:15
+      5  100.0%            LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+      3    2.6%      LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/read.js:77:34
+      3  100.0%        LazyCompile: ~invokeCallback /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:216:29
+      3  100.0%          LazyCompile: ~done /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:199:17
+      3  100.0%            LazyCompile: ~onEnd /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:258:18
+      3    2.6%      LazyCompile: *parse /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/media-typer/index.js:139:15
+      3  100.0%        LazyCompile: *typeis /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:43:17
+      3  100.0%          LazyCompile: *typeofrequest /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/type-is/index.js:123:24
+      3  100.0%            LazyCompile: *jsonParser /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/body-parser/lib/types/json.js:98:30
+     14    5.3%    LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+     14  100.0%      LazyCompile: *end _http_outgoing.js:769:45
+     14  100.0%        LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     14  100.0%          LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+     14  100.0%            LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+     12    4.5%    LazyCompile: *onData /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/raw-body/index.js:240:19
+     12  100.0%      LazyCompile: *Readable.read internal/streams/readable.js:390:35
+     12  100.0%        LazyCompile: *resume_ internal/streams/readable.js:965:17
+     12  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      4    1.5%    LazyCompile: *etag /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/etag/index.js:70:15
+      4  100.0%      LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      4  100.0%        LazyCompile: *json /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:239:25
+      4  100.0%          LazyCompile: *send /home/danielbastidas/git-repo/node-js-certification/performance/node_modules/express/lib/response.js:107:25
+      2   50.0%            LazyCompile: ~<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+      2   50.0%            LazyCompile: *<anonymous> /home/danielbastidas/git-repo/node-js-certification/performance/server.js:12:19
+
+    173    1.8%  __libc_read
+
