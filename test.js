@@ -48,3 +48,10 @@ const main = async () => {
 };
 
 main();
+
+var awesomeFunction = function (coolThings) {
+    // ..
+    return amazingStuff;
+};
+
+console.log(`The function name is: ${awesomeFunction.name}`)
