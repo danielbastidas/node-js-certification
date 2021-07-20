@@ -1,0 +1,9 @@
+Try all the operators in the semver calculator page: https://semver.npmjs.com/
+operators
+^ allows changes that do not modify the left-most non zero element
+~ allows patch changes if the minor version is specified. Allows minor versions if only the major version is 
+specified. If the whole version number is specified (including patch and prerelease tags) then the last part is 
+allowed to change
+Pre-release tags:
+$semver 1.2.3 -i prerelease --preid beta -> 1.2.4-beta.0
+$semver 1.2.4-beta.0 -i prerelease -> 1.2.4-beta.1

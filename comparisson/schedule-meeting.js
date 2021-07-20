@@ -23,7 +23,6 @@ function scheduleMeeting(startTime, durationMinutes) {
 
 function timeInRange(startTime, dayStart, dayEnd) {
 
-    let validTime = false
     const dayStartHour = Number(dayStart.split(":")[0])
     const dayStartMinutes = Number(dayStart.split(":")[1])
     const dayEndHour = Number(dayEnd.split(":")[0])

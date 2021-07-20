@@ -1,0 +1,19 @@
+{
+  "name": "stream-adventure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "beep_boop.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest ./tests"
+  },
+  "keywords": [],
+  "author": "Daniel Bastidas",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "streamtest": "^2.0.0"
+  }
+}

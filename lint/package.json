@@ -1,0 +1,16 @@
+{
+  "name": "lint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard"
+  },
+  "keywords": [],
+  "author": "Daniel Bastidas",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
